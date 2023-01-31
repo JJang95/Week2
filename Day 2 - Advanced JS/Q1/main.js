@@ -5,3 +5,9 @@ function add2(num1) {
         }
     }
 }
+
+//test_case
+
+console.log(add2(2)(3)(4));
+console.log(add2(12)(17)(6));
+console.log(add2(7)(11)(8));
