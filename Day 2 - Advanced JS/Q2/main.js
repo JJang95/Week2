@@ -32,13 +32,26 @@ car.isTesla = function(car) {
 
 //ES6
 
-class car extends vehicle {
-    constructor(engine, speed, wheels, brake) {
+class vehicle {
+    constructor(engine, speed) {
+        
+        this.engine = engine;
+        this.speed = speed;
+    }
 
+    info() {
+
+        console.log(`Engine: ${this.engine} Speed: ${this.speed}`);
+    }
+}
+
+class car extends vehicle {
+
+    constructor(engine, speed, wheels, brake) {
         super(engine, speed);
         this.wheels = wheels;
         this.brake = brake;
-}
+    }
 
     honk() {
 
@@ -49,5 +62,4 @@ class car extends vehicle {
 
         return car.brake === true;
     }
-
 }
