@@ -3,46 +3,46 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
     .then(data => {
 
-    let tableBody = document.getElementById("table-body");
+    let tableInput = document.getElementById("tables");
     data.forEach(user => {
 
         let row = document.createElement("tr");
 
-        let idCell = document.createElement("td");
+        let idData = document.createElement("td");
 
-        idCell.innerText = user.id;
+        idData.innerText = user.id;
 
-        let nameCell = document.createElement("td");
-        nameCell.innerText = user.name;
+        let nameData = document.createElement("td");
+        nameData.innerText = user.name;
 
-        let usernameCell = document.createElement("td");
-        usernameCell.innerText = user.username;
+        let usernameData = document.createElement("td");
+        usernameData.innerText = user.username;
 
-        let emailCell = document.createElement("td");
-        emailCell.innerText = user.email;
+        let emailData = document.createElement("td");
+        emailData.innerText = user.email;
 
-        let addressCell = document.createElement("td");
-        addressCell.innerHTML = user.address.street + "<br>" + user.address.suite + "<br>" + user.address.city + "<br>" + user.address.zipcode + "<br><br>Latitude: " 
+        let addressData = document.createElement("td");
+        addressData.innerHTML = user.address.street + "<br>" + user.address.suite + "<br>" + user.address.city + "<br>" + user.address.zipcode + "<br><br>Latitude: " 
         + user.address.geo.lat + "<br>Longitude: " + user.address.geo.lng;
 
-        let phoneCell = document.createElement("td");
-        phoneCell.innerText = user.phone;
+        let phoneData = document.createElement("td");
+        phoneData.innerText = user.phone;
 
-        let websiteCell = document.createElement("td");
-        websiteCell.innerText = user.website;
+        let websiteData = document.createElement("td");
+        websiteData.innerText = user.website;
 
-        let companyCell = document.createElement("td");
-        companyCell.innerHTML =  user.company.name + "<br><br>" + user.company.catchPhrase + "<br><br>" + user.company.bs;
+        let companyData = document.createElement("td");
+        companyData.innerHTML =  user.company.name + "<br><br>" + user.company.catchPhrase + "<br><br>" + user.company.bs;
 
-        row.appendChild(idCell);
-        row.appendChild(nameCell);
-        row.appendChild(usernameCell);
-        row.appendChild(emailCell);
-        row.appendChild(addressCell);
-        row.appendChild(phoneCell);
-        row.appendChild(websiteCell);
-        row.appendChild(companyCell);
-        tableBody.appendChild(row);
+        row.appendChild(idData);
+        row.appendChild(nameData);
+        row.appendChild(usernameData);
+        row.appendChild(emailData);
+        row.appendChild(addressData);
+        row.appendChild(phoneData);
+        row.appendChild(websiteData);
+        row.appendChild(companyData);
+        tableInput.appendChild(row);
     });
 })
 
