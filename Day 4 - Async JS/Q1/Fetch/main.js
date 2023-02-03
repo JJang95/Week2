@@ -3,7 +3,8 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
     .then(data => {
 
-    let tableInput = document.getElementById("tables");
+    let table = document.getElementById("tables");
+    
     data.forEach(user => {
 
         let row = document.createElement("tr");
@@ -42,7 +43,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         row.appendChild(phoneData);
         row.appendChild(websiteData);
         row.appendChild(companyData);
-        tableInput.appendChild(row);
+        table.appendChild(row);
     });
 })
 
