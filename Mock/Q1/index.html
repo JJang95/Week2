@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>United States Population</h1>
+
+    <select id="sort">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+    </select>
+
+    <table id="population-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+
+        <tbody id="population-data">
+
+        </tbody>
+
+        <tfoot>
+            <tr id="average-row">
+                <td>Average</td>
+                <td id="average-population"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+    <script src="main.js"></script>
+</html>
